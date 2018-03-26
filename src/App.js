@@ -55,6 +55,15 @@ class App extends Component {
                 rows: rows
               });
             });
+
+            listPrimitive.onSync(rows => {
+              console.log("item synced");
+              console.log(rows);
+
+              this.setState({
+                rows: rows
+              });
+            });
           })
           .catch(error => console.log(error));
       })
